@@ -1,12 +1,78 @@
 @import "tailwindcss";
-
 @layer base {
   body { 
     font-family: 'Nunito Sans Variable', sans-serif;
    }
 
 }
-
 @utility flex-center {
   @apply flex items-center justify-center;
+}
+
+@theme {
+  --animate-wiggle: wiggle 5s ease-in-out infinite;
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-8deg) translateY(-20px);
+    }
+    20% {
+      transform: rotate(6deg) translateY(-10px);
+    }
+    40% {
+      transform: rotate(-3deg) translateY(0px);
+    }
+    50% {
+      transform: rotate(2deg) translateY(3px);
+    }
+    70% {
+      transform: rotate(0deg) translateY(0px);
+    }
+    90%{
+      transform: rotate(6deg) translateY(-10px);
+    }
+    100%{
+        transform: rotate(-8deg) translateY(-20px);
+    }
+  }
+ --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    /* 0% {
+      transform: translateY(0px) rotate(-1deg) scale(1);
+    }
+    20% {
+      transform: translateY(-4px) rotate(0deg) scale(1.005);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1deg) scale(1.01);
+    }
+    80% {
+      transform: translateY(-4px) rotate(0deg) scale(1.005);
+    }
+    100% {
+      transform: translateY(0px) rotate(-1deg) scale(1);
+    } */
+     0%{
+      transform: translateY(0);
+     }
+     50%{
+      transform: translateY(-10px);
+     }
+     100%{
+      transform: translateY(0);
+     }
+  }
+
+  --animate-fadeIn: fadeIn 3s ease-in-out ;
+  @keyframes fadeIn{
+    0%{
+      opacity: 0
+    }
+
+    100%{
+      opacity: 1
+    }
+
+  }
 }
