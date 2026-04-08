@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const routes = ["Home", "About", "Services", "Pricing", "Contact"];
 
-const Nav = () => {
+const Nav = ({isOpen, shoppingClick}) => {
   const [click, setClick] = useState(false);
 
   return (
@@ -35,9 +35,9 @@ const Nav = () => {
         </ul>
       </div>
       {/* Shopping Bag */}
-      <div className="fixed left-5 bottom-5 lg:static">
+      <div className="fixed left-5 bottom-5 lg:static" onClick={()=> shoppingClick(true)}>
         <div className="flex-center rounded-full bg-gray-100 border-gray-50 h-13 w-13 shadow-md cursor-pointer lg:mr-8">
-          <TbShoppingBag />
+          <TbShoppingBag  />
         </div>
       </div>
     </nav>
