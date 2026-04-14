@@ -5,6 +5,7 @@ import { SHOE_LIST } from "@/components/constant";
 import NewArrival from "@/components/NewArrival";
 import SideBar from "@/components/SideBar";
 import { useState } from "react";
+import CartItem from "@/components/CartItem";
 
 export default function Home() {
   const [isSideBarOpen, setSideBar]= useState(false);
@@ -14,7 +15,15 @@ export default function Home() {
       <Nav shoppingClick={setSideBar}/>
       <ShoeDetail /> 
       <NewArrival items={SHOE_LIST} />
-      <SideBar isOpen={isSideBarOpen} setSideBar={setSideBar}>HI</SideBar>
+      <SideBar isOpen={isSideBarOpen} setSideBar={setSideBar}>
+        <h2 className="font-bold text-2xl p-4">Cart</h2>
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[1]} />
+        <CartItem item={SHOE_LIST[2]} />
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[1]} />
+        <CartItem item={SHOE_LIST[2]} />
+      </SideBar>
   </div>
   );
 }

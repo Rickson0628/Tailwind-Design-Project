@@ -27,8 +27,8 @@ const ShoeDetail = () => {
         {/* Nike Price */}
         <div className="flex flex-row space-x-10 items-center">
         <div className="text-3xl font-extrabold lg:text-5xl">$100</div> 
-        <Select title="QTY" items={QTY} />
-        <Select title="SIZE" items={SIZES}/>
+        <Select title="QTY" items={QTY} addClass={`w-24 p-4`} />
+        <Select title="SIZE" items={SIZES} addClass={`w-24 p-4`}/>
         </div>
         {/* Nike Button */}
         <div className="space-x-6">
