@@ -5,7 +5,16 @@ import { SHOE_LIST } from "@/components/constant";
 import NewArrival from "@/components/NewArrival";
 import SideBar from "@/components/SideBar";
 import { useState } from "react";
-import CartItem from "@/components/CartItem";
+import Cart from "@/components/Cart";
+
+
+const FakeList = SHOE_LIST.map((shoe)=>{
+  return {
+   product: shoe,
+   qty: 1,
+   size: 40
+  }
+})
 
 export default function Home() {
   const [isSideBarOpen, setSideBar]= useState(false);
@@ -16,13 +25,8 @@ export default function Home() {
       <ShoeDetail /> 
       <NewArrival items={SHOE_LIST} />
       <SideBar isOpen={isSideBarOpen} setSideBar={setSideBar}>
-        <h2 className="font-bold text-2xl p-4">Cart</h2>
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[1]} />
-        <CartItem item={SHOE_LIST[2]} />
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[1]} />
-        <CartItem item={SHOE_LIST[2]} />
+       <Cart cartList = {FakeList}/>
+        
       </SideBar>
   </div>
   );

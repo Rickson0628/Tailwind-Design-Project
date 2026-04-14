@@ -1,10 +1,10 @@
 import { IoIosArrowDown } from "react-icons/io"; 
 import React from 'react';
 
-const Select = ({title, items, addClass}) => {
+const Select = ({def, title, items, addClass}) => {
   return (
     <div className="relative">
-      <select name={title} defaultValue={""} className={`cursor-pointer appearance-none border border-gray-300 
+      <select name={title} defaultValue={def || ""} className={`cursor-pointer appearance-none border border-gray-300 
       bg-white ${addClass}`}>
         <option value="" disabled hidden>{title}</option>
         {items.map((item)=>(
