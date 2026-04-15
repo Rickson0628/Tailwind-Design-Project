@@ -7,7 +7,7 @@ import { CiTrash } from "react-icons/ci";
 
 
 
-const CartItem = ({ item: {product, qty, size} }) => {
+const CartItem = ({ item: {product, qty, size}, removeItem }) => {
   return (
     <div className="cursor-pointer  bg-gray-100 transition transform hover:bg-blue-300 rounded-lg dark:text-white dark:bg-gray-900">
       <div className=" p-2 space-x-2">
@@ -45,7 +45,7 @@ const CartItem = ({ item: {product, qty, size} }) => {
           </div>
           </div>
           {/* Trash Button */}
-          <button>
+          <button onClick={() => removeItem(product.id, size)}>
             <CiTrash className="mt-4 hover:text-red-600" size={25} />
           </button>
         </div>

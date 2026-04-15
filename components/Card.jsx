@@ -3,9 +3,9 @@ import Image from "next/image";
 import React from "react";
 
 
-const Card = ({shoe}) => {
+const Card = ({shoe, setCard}) => {
   return (
-    <div className={`${shoe.className} relative max-w-xl lg:w-120 cursor-pointer transform transition hover:scale-105 rounded-2xl `}>
+    <div onClick={()=>setCard(shoe)} className={`${shoe.className} relative max-w-xl lg:w-120 cursor-pointer transform transition hover:scale-105 rounded-2xl `}>
       <div className="justify-center">
         <div className="p-8">
           <h1 className="text-2xl font-bold">{shoe.title}</h1>
