@@ -13,7 +13,7 @@ const Select = ({def, title, items, addClass}) => {
         }
 
       </select>
-      <div className="flex-center pointer-events-none absolute inset-y-0 right-0 pr-3">
+      <div className="flex-center pointer-events-none absolute inset-y-0 right-0 pr-3 dark:text-black">
         <IoIosArrowDown />
       </div>
     </div>

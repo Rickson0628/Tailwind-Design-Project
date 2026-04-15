@@ -6,7 +6,7 @@ import Card from "./Card";
 const NewArrival = ({items}) => {
   return (
     <div className="mt-10">
-      <div className="flex justify-center items-center font-extrabold text-4xl h-40 bg-cover bg-center">
+      <div className="flex justify-center items-center font-extrabold text-4xl h-40 bg-cover bg-center dark:text-white">
         NEW ARRIVALS
         </div>
         <div className="lg:flex justify-center">

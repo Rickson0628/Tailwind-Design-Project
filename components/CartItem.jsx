@@ -9,7 +9,7 @@ import { CiTrash } from "react-icons/ci";
 
 const CartItem = ({ item: {product, qty, size} }) => {
   return (
-    <div className="cursor-pointer  bg-gray-100 transition transform hover:bg-blue-300 rounded-lg">
+    <div className="cursor-pointer  bg-gray-100 transition transform hover:bg-blue-300 rounded-lg dark:text-white dark:bg-gray-900">
       <div className=" p-2 space-x-2">
       
         {/* Top Row */}
@@ -35,13 +35,13 @@ const CartItem = ({ item: {product, qty, size} }) => {
           <div className="pl-22 flex space-x-3 ">
             {/* Select Buttons */}
           <div>
-            <div className="font-bold">SIZE</div>
-            <Select def={size} title="SIZE" items={SIZES} addClass={'p-1 w-16 text-sm'} />
+            <div className="font-bold ">SIZE</div>
+            <Select def={size} title="SIZE" items={SIZES} addClass={'p-1 w-16 text-sm dark:text-black'} />
           </div>
 
           <div>
             <div className="font-bold">QTY</div>
-            <Select def={qty} title="QTY" items={QTY} addClass={'p-1 w-16 text-sm'} />
+            <Select def={qty} title="QTY" items={QTY} addClass={'p-1 w-16 text-sm dark:text-black'} />
           </div>
           </div>
           {/* Trash Button */}

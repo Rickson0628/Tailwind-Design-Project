@@ -8,7 +8,7 @@ import { SIZES, QTY } from "./constant";
 const ShoeDetail = () => {
   return (
     // Flexbox
-    <div className="flex flex-col lg:flex-row-reverse">
+    <div className="flex flex-col lg:flex-row-reverse dark:text-white">
       {/* Shoe Image */}
       <div className="flex-1 lg:-mt-32 lg:ml-28">
         <div className=" flex-center h-full bg-linear-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]  ">
@@ -27,12 +27,12 @@ const ShoeDetail = () => {
         {/* Nike Price */}
         <div className="flex flex-row space-x-10 items-center">
         <div className="text-3xl font-extrabold lg:text-5xl">$100</div> 
-        <Select title="QTY" items={QTY} addClass={`w-24 p-4`} />
-        <Select title="SIZE" items={SIZES} addClass={`w-24 p-4`}/>
+        <Select title="QTY" items={QTY} addClass={`w-24 p-4 dark:text-black`} />
+        <Select title="SIZE" items={SIZES} addClass={`w-24 p-4 dark:text-black`}/>
         </div>
         {/* Nike Button */}
         <div className="space-x-6">
-          <button className="text-white bg-black h-15 w-40 ">Add to Bag</button>
+          <button className="text-white bg-black h-15 w-40 dark:bg-white dark:text-black ">Add to Bag</button>
           <a href="#" className="underline underline-offset-4">
             View Details
           </a>

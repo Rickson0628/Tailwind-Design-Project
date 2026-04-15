@@ -20,7 +20,7 @@ export default function Home() {
   const [isSideBarOpen, setSideBar]= useState(false);
 
   return (
-   <div className="p-10 xl:px-24">  
+   <div className="p-10 xl:px-24 dark:bg-night">  
       <Nav shoppingClick={setSideBar}/>
       <ShoeDetail /> 
       <NewArrival items={SHOE_LIST} />
